@@ -4,7 +4,7 @@
   "description": "A simple React + TypeScript component library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm --filter examples dev"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +13,17 @@
   "dependencies": {
     "@csc-react-components/components": "workspace:*",
     "@csc-react-components/theme-chalk": "workspace:*",
-    "@csc-react-components/utils": "workspace:*"
+    "@csc-react-components/utils": "workspace:*",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^24.10.7",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.52.0"
   }
 }
