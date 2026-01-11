@@ -1,0 +1,21 @@
+{
+  "name": "csc-react-components",
+  "version": "1.0.0",
+  "description": "A simple React + TypeScript component library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.0",
+  "dependencies": {
+    "@csc-react-components/components": "workspace:*",
+    "@csc-react-components/theme-chalk": "workspace:*",
+    "@csc-react-components/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
