@@ -1,15 +1,20 @@
-// import { useState } from "react";
-// import "./App.css";
-import { Button } from "@csc-react-components/components";
-import React from "react";
+import { Outlet, NavLink } from "react-router";
 
 function App() {
-  // const [count, setCount] = useState(0);
-
   return (
-    <>
-      <Button />
-    </>
+    <div>
+      <header>
+        <nav>
+          <NavLink to="/" style={{ margin: 10 }} end>
+            首页
+          </NavLink>
+          <NavLink to="/components/button">Button</NavLink>
+        </nav>
+      </header>
+      <main>
+        <Outlet />
+      </main>
+    </div>
   );
 }
 
