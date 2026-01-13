@@ -1,7 +1,9 @@
+import { lazy } from "react";
 import { Routes, Route } from "react-router";
 import App from "@/App";
-import Dashboard from "@/pages/Dashboard";
-import ButtonDemo from "@/pages/ButtonDemo";
+
+const Dashboard = lazy(() => import("@/pages/Dashboard"));
+const ButtonDemo = lazy(() => import("@/pages/ButtonDemo"));
 
 const Router = () => {
   return (

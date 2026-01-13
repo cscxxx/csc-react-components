@@ -1,0 +1,14 @@
+/* 浏览器样式重置 */
+@import "tailwindcss";
+/* css变量
+
+ */
+:root {
+  /* --color-primary: ; */
+  --color-background: #007bff;
+}
+html {
+  margin: 0;
+  padding: 10px;
+  /* box-sizing: border-box; */
+}
