@@ -32,6 +32,15 @@ const ButtonDemo = () => {
           Click me
         </Button>
       </div>
+      <div className="text-lg font-bold  py-4">按钮禁用</div>
+      <div className="flex gap-4 items-center ">
+        <Button variant="primary" size="medium" disabled>
+          Click me
+        </Button>
+        <Button variant="default" size="medium" disabled>
+          Click me
+        </Button>
+      </div>
     </div>
   );
 };

@@ -4,7 +4,9 @@
   "description": "A simple React + TypeScript component library",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter examples dev"
+    "dev": "pnpm --filter examples dev",
+    "test": "pnpm --filter @csc-react-components/components test",
+    "test:button": "pnpm --filter @csc-react-components/components test:button"
   },
   "keywords": [],
   "author": "",
@@ -22,8 +24,10 @@
     "@types/node": "^24.10.7",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
     "eslint": "^9.39.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.52.0"
+    "typescript-eslint": "^8.52.0",
+    "vite": "^7.3.1"
   }
 }
