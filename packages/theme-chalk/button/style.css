@@ -1,0 +1,90 @@
+/* Button 组件基础样式 */
+.csc-button {
+  /* 重置默认样式 */
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  outline: none;
+  /* padding、font-size、line-height、border-radius 由尺寸样式控制 */
+}
+
+/* 按钮类型样式 */
+.csc-button--default {
+  color: #606266;
+  background-color: #ffffff;
+  border-color: #dcdfe6;
+}
+
+.csc-button--default:hover:not(.is-disabled) {
+  color: #409eff;
+  border-color: #c6e2ff;
+  background-color: #ecf5ff;
+}
+
+.csc-button--primary {
+  color: #ffffff;
+  background-color: #409eff;
+  border-color: #409eff;
+}
+
+.csc-button--primary:hover:not(.is-disabled) {
+  background-color: #66b1ff;
+  border-color: #66b1ff;
+}
+
+.csc-button--danger {
+  color: #ffffff;
+  background-color: #f56c6c;
+  border-color: #f56c6c;
+}
+
+.csc-button--danger:hover:not(.is-disabled) {
+  background-color: #f78989;
+  border-color: #f78989;
+}
+
+/* 按钮尺寸样式 */
+.csc-button--small {
+  padding: 4px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 3px;
+  height: 28px;
+}
+
+.csc-button--medium {
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 4px;
+  height: 40px;
+}
+
+.csc-button--large {
+  padding: 14px 28px;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 5px;
+  height: 48px;
+}
+
+/* 禁用状态 */
+.csc-button.is-disabled,
+.csc-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.csc-button.is-disabled:hover,
+.csc-button:disabled:hover {
+  color: inherit;
+  background-color: inherit;
+  border-color: inherit;
+}

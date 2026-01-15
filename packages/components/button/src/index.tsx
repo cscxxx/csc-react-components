@@ -1,8 +1,56 @@
 import React from "react";
+import "@csc-react-components/theme-chalk/button";
 
-export const Button = () => {
-  return <button>Click me</button>;
-};
+// 按钮类型
+export type ButtonType = "primary" | "default" | "danger";
+
+// 按钮尺寸
+export type ButtonSize = "small" | "medium" | "large";
+
+// Button 组件属性接口
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /** 按钮类型（primary/default/danger） */
+  variant?: ButtonType;
+  /** 按钮尺寸（small/medium/large） */
+  size?: ButtonSize;
+  /** 按钮内容 */
+  children?: React.ReactNode;
+}
+
+/**
+ * Button 按钮组件
+ * 支持不同类型、尺寸和禁用状态
+ */
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  (props, ref) => {
+    const {
+      variant = "default",
+      size = "medium",
+      disabled = false,
+      children = "按钮",
+      className,
+      ...rest
+    } = props;
+
+    // 构建类名
+    const classNames = [
+      "csc-button",
+      `csc-button--${variant}`,
+      `csc-button--${size}`,
+      disabled && "is-disabled",
+      className,
+    ]
+      .filter(Boolean)
+      .join(" ");
+
+    return (
+      <button ref={ref} className={classNames} disabled={disabled} {...rest}>
+        {children}
+      </button>
+    );
+  }
+);
 
 Button.displayName = "Button";
 
