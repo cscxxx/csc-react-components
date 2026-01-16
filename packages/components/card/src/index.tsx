@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "@csc-react-components/theme-chalk/card";
+import "@csc-react-components/theme-chalk/card/index.css";
 import { cn } from "@csc-react-components/utils";
 
 /**
