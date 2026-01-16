@@ -19,6 +19,9 @@ function App() {
           <NavLink to="/components/button" className={getNavLinkClassName()}>
             Button
           </NavLink>
+          <NavLink to="/components/card" className={getNavLinkClassName()}>
+            Card
+          </NavLink>
         </nav>
       </header>
       <main>

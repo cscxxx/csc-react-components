@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "pnpm --filter examples dev",
     "test": "pnpm --filter @csc-react-components/components test",
-    "test:button": "pnpm --filter @csc-react-components/components test:button"
+    "test:button": "pnpm --filter @csc-react-components/components test:button",
+    "test:card": "pnpm --filter @csc-react-components/components test:card"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "@csc-react-components/components": "workspace:*",
     "@csc-react-components/theme-chalk": "workspace:*",
     "@csc-react-components/utils": "workspace:*",
+    "clsx": "^2.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },

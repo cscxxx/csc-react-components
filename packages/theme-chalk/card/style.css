@@ -1,0 +1,134 @@
+/* Card 组件基础样式 */
+.csc-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: all 0.3s;
+  /* 确保卡片高度根据内容自适应，不被父容器拉伸 */
+  height: auto;
+  min-height: 0;
+  /* 防止在 flex 容器中被拉伸 */
+  align-self: flex-start;
+}
+
+/* 卡片图片容器 */
+.csc-card__image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f5f7fa;
+  /* 默认情况下，容器高度根据内容自适应 */
+  /* 不设置固定高度时，容器会根据图片的实际尺寸自适应 */
+  min-height: 0;
+}
+
+/* 设置了固定高度的图片容器 */
+.csc-card__image--fixed-height {
+  /* 当设置了 imgHeight 时，容器使用固定高度 */
+  aspect-ratio: auto;
+  flex-shrink: 0;
+}
+
+/* 图片元素基础样式 */
+.csc-card__image-element {
+  width: 100%;
+  display: block;
+  /* 默认情况下，图片高度自适应，保持原始宽高比 */
+  /* 当图片加载完成后，图片的实际高度会自然地覆盖容器的 aspect-ratio，实现真正的自适应 */
+  height: auto;
+}
+
+/* 当图片容器有固定高度时，图片填充容器 */
+.csc-card__image--fixed-height .csc-card__image-element {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 图片加载完成后的显示状态（淡入动画） */
+.csc-card__image-element.csc-card__image-loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+/* 图片隐藏状态（加载中或加载失败时） */
+.csc-card__image-element.csc-card__image-hidden {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 图片加载中的 loading 效果容器 */
+.csc-card__image-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+}
+
+/* 骨架屏加载动画效果 */
+.csc-card__image-skeleton {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+/* 骨架屏动画关键帧 */
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* 图片加载失败时的错误状态 */
+.csc-card__image-error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+  color: #909399;
+  font-size: 14px;
+}
+
+/* 卡片概要 */
+.csc-card__summary {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  /* 确保概要区域高度自适应 */
+  flex: 0 0 auto;
+  min-height: 0;
+}
+
+.csc-card__summary p {
+  margin: 0;
+  font-size: 14px;
+  color: #606266;
+  line-height: 1.5;
+}
+
+/* 卡片内容 */
+.csc-card__content {
+  padding: 12px;
+  /* 确保内容区域高度自适应 */
+  flex: 0 0 auto;
+  min-height: 0;
+}

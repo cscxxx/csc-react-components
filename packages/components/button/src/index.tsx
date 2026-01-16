@@ -1,5 +1,6 @@
 import React from "react";
 import "@csc-react-components/theme-chalk/button";
+import { cn } from "../../utils";
 
 // 按钮类型
 export type ButtonType = "primary" | "default" | "danger";
@@ -33,16 +34,14 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       ...rest
     } = props;
 
-    // 构建类名
-    const classNames = [
+    // 构建类名，使用 clsx 处理条件类名
+    const classNames = cn(
       "csc-button",
       `csc-button--${variant}`,
       `csc-button--${size}`,
       disabled && "is-disabled",
-      className,
-    ]
-      .filter(Boolean)
-      .join(" ");
+      className
+    );
 
     return (
       <button ref={ref} className={classNames} disabled={disabled} {...rest}>

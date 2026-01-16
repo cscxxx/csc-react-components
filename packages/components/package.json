@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "test:button": "vitest button/test/button.test.tsx"
+    "test:button": "vitest button/test/button.test.tsx",
+    "test:card": "vitest card/test/card.test.tsx"
   },
   "keywords": [],
   "author": "",
