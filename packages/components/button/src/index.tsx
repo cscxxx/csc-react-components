@@ -1,6 +1,6 @@
 import React from "react";
 import "@csc-react-components/theme-chalk/button";
-import { cn } from "../../utils";
+import { cn } from "@csc-react-components/utils";
 
 // 按钮类型
 export type ButtonType = "primary" | "default" | "danger";

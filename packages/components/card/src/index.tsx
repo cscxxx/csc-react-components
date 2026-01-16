@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "@csc-react-components/theme-chalk/card";
-import { cn } from "../../utils";
+import { cn } from "@csc-react-components/utils";
 
 /**
  * 图片加载状态类型
