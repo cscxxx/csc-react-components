@@ -3,17 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "types": "index.d.ts",
+  "type": "module",
+  "files": [
+    "**/*.js",
+    "**/*.d.ts"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "clsx": "^2.0.0"
+  },
   "scripts": {
     "test": "vitest",
     "test:button": "vitest button/test/button.test.tsx",
     "test:card": "vitest card/test/card.test.tsx"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.20.0",
-  "dependencies": {
-    "@csc-react-components/utils": "workspace:*"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",

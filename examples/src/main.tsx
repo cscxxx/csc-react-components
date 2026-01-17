@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
 import Router from "./router/index";
 import "./index.css";
+import "@csc-react-components/theme-chalk/index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

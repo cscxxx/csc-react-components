@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm --filter examples dev",
+    "build": "rollup -c",
     "test": "pnpm --filter @csc-react-components/components test",
     "test:button": "pnpm --filter @csc-react-components/components test:button",
     "test:card": "pnpm --filter @csc-react-components/components test:card"
@@ -23,11 +24,21 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
     "@types/node": "^24.10.7",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
     "eslint": "^9.39.2",
+    "postcss": "^8.4.49",
+    "postcss-import": "^16.1.0",
+    "rollup": "^4.28.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-delete": "^2.1.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.52.0",
     "vite": "^7.3.1"

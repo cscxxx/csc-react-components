@@ -2,12 +2,13 @@
   "name": "@csc-react-components/theme-chalk",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "style": "index.css",
+  "main": "index.css",
+  "type": "module",
+  "files": [
+    "index.css"
+  ],
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.20.0"
+  "license": "ISC"
 }

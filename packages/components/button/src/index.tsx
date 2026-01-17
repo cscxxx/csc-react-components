@@ -1,5 +1,4 @@
 import React from "react";
-import "@csc-react-components/theme-chalk/button/index.css";
 import { cn } from "@csc-react-components/utils";
 
 // 按钮类型
