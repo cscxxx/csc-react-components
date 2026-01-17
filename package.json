@@ -1,17 +1,34 @@
 {
   "name": "csc-react-components",
   "version": "1.0.0",
+  "author": "shuchaoxxx",
   "description": "A simple React + TypeScript component library",
-  "main": "index.js",
+  "main": "dist/components/index.js",
+  "types": "dist/components/index.d.ts",
+  "type": "module",
+  "keywords": [
+    "react",
+    "components",
+    "TypeScript"
+  ],
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "clsx": "^2.0.0"
+  },
   "scripts": {
     "dev": "pnpm --filter examples dev",
     "build": "rollup -c",
     "test": "pnpm --filter @csc-react-components/components test",
     "test:button": "pnpm --filter @csc-react-components/components test:button",
-    "test:card": "pnpm --filter @csc-react-components/components test:card"
+    "test:card": "pnpm --filter @csc-react-components/components test:card",
+    "prepublishOnly": "pnpm build",
+    "publish": "npm publish"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.28.0",
   "dependencies": {
